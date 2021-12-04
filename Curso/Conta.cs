@@ -14,7 +14,7 @@ namespace Curso
 
         //Construtores
 
-        public Conta() {}
+        public Conta() { }
 
         public Conta(int numeroConta, string nomeTitularConta, double saldo)
         {
@@ -36,13 +36,13 @@ namespace Curso
 
         public override string ToString()
         {
-            return "Dados da conta \n"
-                    + "Conta: "
+            return  "Conta: "
                     + NumeroConta
                     + ", Titular: "
                     + NomeTitularConta
                     + ", Saldo R$ "
                     + Saldo.ToString("F2", CultureInfo.InvariantCulture);
         }
+
     }
 }

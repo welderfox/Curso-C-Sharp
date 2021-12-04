@@ -119,6 +119,7 @@ namespace Curso
 
             #region Conta bancaria
             string dpInicial;
+            double deposito;
             Conta conta = new Conta();
 
             Console.WriteLine("Digite dados da conta:");
@@ -130,38 +131,30 @@ namespace Curso
             conta.NumeroConta = int.Parse(Console.ReadLine());
 
             Console.WriteLine("Haverá deposito inicial(S/N) ?");
-            dpInicial =  Console.ReadLine();
-            if (dpInicial.Equals("S"))
+            dpInicial = Console.ReadLine();
+            if (dpInicial.Equals("S") || dpInicial.Equals("s") || dpInicial == null)
             {
                 Console.WriteLine("Valor deposito inicial");
-                double deposito1 = Double.Parse(Console.ReadLine());
-                conta.Deposito(deposito1);
+                deposito = Double.Parse(Console.ReadLine());
+                conta.Deposito(deposito);
+                Console.WriteLine("Dados da conta atualizados");
                 Console.WriteLine(conta);
+                Console.WriteLine();
             }
-            else 
-            {
-                //Continuar daqui....
-                Console.WriteLine("Valor saque");
-            }
+            
+                Console.WriteLine("Digite valor que deseja depositar");
+                deposito = Double.Parse(Console.ReadLine());
+                conta.Deposito(deposito);
+                Console.WriteLine("Dados da conta atualizados");
+                Console.WriteLine(conta);
 
+                Console.WriteLine();
 
-
-            Console.WriteLine("Valor saque");
-
-            double saque = Double.Parse(Console.ReadLine());
-
-            conta.Saque(saque);
-
-            Console.WriteLine(conta);
-
-            Console.WriteLine("Valor deposito");
-
-            double deposito = Double.Parse(Console.ReadLine());
-
-            conta.Deposito(deposito);
-
-            Console.WriteLine(conta);
-
+                Console.WriteLine("Entre com um valor para saque...");
+                double saque = Double.Parse(Console.ReadLine());
+                conta.Saque(saque);
+                Console.WriteLine("Dados da conta atualizados");
+                Console.WriteLine(conta);
 
             #endregion
         }
