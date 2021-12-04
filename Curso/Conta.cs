@@ -16,6 +16,12 @@ namespace Curso
 
         public Conta() { }
 
+        public Conta(string nomeTitularConta, int numeroConta)
+        {
+            NomeTitularConta = nomeTitularConta;
+            NumeroConta = numeroConta;
+        }
+
         public Conta(int numeroConta, string nomeTitularConta, double saldo)
         {
             NumeroConta = numeroConta;
@@ -36,7 +42,7 @@ namespace Curso
 
         public override string ToString()
         {
-            return  "Conta: "
+            return "Conta: "
                     + NumeroConta
                     + ", Titular: "
                     + NomeTitularConta
