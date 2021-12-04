@@ -18,17 +18,15 @@ namespace Curso
 
         }
 
-        public Produto(string nome, double preco, int quantidade)
-        {
-            Nome = nome;
-            Preco = preco;
-            Quantidade = quantidade;
-        }
-
         public Produto(string nome, double preco)
         {
             Nome = nome;
             Preco = preco;
+        }
+        //Construtor recebendo referencia de outro construtor usando a palavra 'this'
+        public Produto(string nome, double preco, int quantidade) : this(nome, preco)
+        {
+            Quantidade = quantidade;
         }
 
         //Metodos
