@@ -65,7 +65,7 @@ namespace Curso
             #endregion
 
             #region Produto em estoque
-                       
+
             Console.WriteLine("Entre com os dados do Produto:");
             Console.Write("Nome:");
             var nome = Console.ReadLine();
@@ -74,6 +74,15 @@ namespace Curso
             var preco = Double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
 
             Produto produto = new Produto(nome, preco);
+
+            //Sitaxe alternativa para instanciar objeto.
+             // Produto produto1 = new Produto
+             //{
+             //    Nome = "Radio",
+             //    Preco = 2.30,
+             //    Quantidade = 10
+             //};
+
 
             Console.WriteLine($"Dados do produto: {produto}");
 
