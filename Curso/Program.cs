@@ -66,41 +66,41 @@ namespace Curso
 
             #region Produto em estoque
 
-            Console.WriteLine("Entre com os dados do Produto:");
-            Console.Write("Nome:");
-            var nome = Console.ReadLine();
+            //Console.WriteLine("Entre com os dados do Produto:");
+            //Console.Write("Nome:");
+            //var nome = Console.ReadLine();
 
-            Console.WriteLine("Preco:");
-            var preco = Double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
+            //Console.WriteLine("Preco:");
+            //var preco = Double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
 
-            Produto produto = new Produto(nome, preco);
+            //Produto produto = new Produto(nome, preco);
 
-            //Sitaxe alternativa para instanciar objeto.
-             // Produto produto1 = new Produto
-             //{
-             //    Nome = "Radio",
-             //    Preco = 2.30,
-             //    Quantidade = 10
-             //};
+            ////Sitaxe alternativa para instanciar objeto.
+            // // Produto produto1 = new Produto
+            // //{
+            // //    Nome = "Radio",
+            // //    Preco = 2.30,
+            // //    Quantidade = 10
+            // //};
 
 
-            Console.WriteLine($"Dados do produto: {produto}");
+            //Console.WriteLine($"Dados do produto: {produto}");
 
-            Console.WriteLine();
+            //Console.WriteLine();
 
-            Console.Write("Digite a qauntidade de produto a ser adicionado ao estoque:");
-            int qtd = int.Parse(Console.ReadLine());
-            produto.AdicionarProduto(qtd);
-            Console.WriteLine();
-            Console.WriteLine($"Dados do produto atualizados: {produto}");
+            //Console.Write("Digite a qauntidade de produto a ser adicionado ao estoque:");
+            //int qtd = int.Parse(Console.ReadLine());
+            //produto.AdicionarProduto(qtd);
+            //Console.WriteLine();
+            //Console.WriteLine($"Dados do produto atualizados: {produto}");
 
-            Console.WriteLine();
+            //Console.WriteLine();
 
-            Console.Write("Digite a qauntidade de produto a ser removido do estoque:");
-            qtd = int.Parse(Console.ReadLine());
-            produto.RemoverProduto(qtd);
-            Console.WriteLine();
-            Console.WriteLine($"Dados do produto atualizados: {produto}");
+            //Console.Write("Digite a qauntidade de produto a ser removido do estoque:");
+            //qtd = int.Parse(Console.ReadLine());
+            //produto.RemoverProduto(qtd);
+            //Console.WriteLine();
+            //Console.WriteLine($"Dados do produto atualizados: {produto}");
 
             #endregion
 
@@ -114,6 +114,54 @@ namespace Curso
 
             //Console.WriteLine();
             //Console.WriteLine($"{retangulo}");
+
+            #endregion
+
+            #region Conta bancaria
+            string dpInicial;
+            Conta conta = new Conta();
+
+            Console.WriteLine("Digite dados da conta:");
+
+            Console.Write("Titular da conta: ");
+            conta.NomeTitularConta = Console.ReadLine();
+
+            Console.Write("Numero da conta: ");
+            conta.NumeroConta = int.Parse(Console.ReadLine());
+
+            Console.WriteLine("Haverá deposito inicial(S/N) ?");
+            dpInicial =  Console.ReadLine();
+            if (dpInicial.Equals("S"))
+            {
+                Console.WriteLine("Valor deposito inicial");
+                double deposito1 = Double.Parse(Console.ReadLine());
+                conta.Deposito(deposito1);
+                Console.WriteLine(conta);
+            }
+            else 
+            {
+                //Continuar daqui....
+                Console.WriteLine("Valor saque");
+            }
+
+
+
+            Console.WriteLine("Valor saque");
+
+            double saque = Double.Parse(Console.ReadLine());
+
+            conta.Saque(saque);
+
+            Console.WriteLine(conta);
+
+            Console.WriteLine("Valor deposito");
+
+            double deposito = Double.Parse(Console.ReadLine());
+
+            conta.Deposito(deposito);
+
+            Console.WriteLine(conta);
+
 
             #endregion
         }
