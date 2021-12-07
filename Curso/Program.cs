@@ -118,43 +118,71 @@ namespace Curso
             #endregion
 
             #region Conta bancaria
-            string dpInicial;
-            double deposito;
-            Conta conta = new Conta();
 
-            Console.WriteLine("Digite dados da conta:");
+            //string dpInicial;
+            //double deposito;
+            //Conta conta = new Conta();
 
-            Console.Write("Titular da conta: ");
-            conta.NomeTitularConta = Console.ReadLine();
+            //Console.WriteLine("Digite dados da conta:");
 
-            Console.Write("Numero da conta: ");
-            conta.NumeroConta = int.Parse(Console.ReadLine());
+            //Console.Write("Titular da conta: ");
+            //conta.NomeTitularConta = Console.ReadLine();
 
-            Console.WriteLine("Haverá deposito inicial(S/N) ?");
-            dpInicial = Console.ReadLine();
-            if (dpInicial.Equals("S") || dpInicial.Equals("s") || dpInicial == null)
+            //Console.Write("Numero da conta: ");
+            //conta.NumeroConta = int.Parse(Console.ReadLine());
+
+            //Console.WriteLine("Haverá deposito inicial(S/N) ?");
+            //dpInicial = Console.ReadLine();
+            //if (dpInicial.Equals("S") || dpInicial.Equals("s") || dpInicial == null)
+            //{
+            //    Console.WriteLine("Valor deposito inicial");
+            //    deposito = Double.Parse(Console.ReadLine());
+            //    conta.Deposito(deposito);
+            //    Console.WriteLine("Dados da conta atualizados");
+            //    Console.WriteLine(conta);
+            //    Console.WriteLine();
+            //}
+
+            //    Console.WriteLine("Digite valor que deseja depositar");
+            //    deposito = Double.Parse(Console.ReadLine());
+            //    conta.Deposito(deposito);
+            //    Console.WriteLine("Dados da conta atualizados");
+            //    Console.WriteLine(conta);
+
+            //    Console.WriteLine();
+
+            //    Console.WriteLine("Entre com um valor para saque...");
+            //    double saque = Double.Parse(Console.ReadLine());
+            //    conta.Saque(saque);
+            //    Console.WriteLine("Dados da conta atualizados");
+            //    Console.WriteLine(conta);
+
+            #endregion
+
+            #region Vetores
+
+            Console.WriteLine("Digite o tamanho do vetor");
+            int n = int.Parse(Console.ReadLine());
+
+            //Declarando vetor
+            double[] vet = new double[n];
+
+            for (int i = 0; i < n; i++)
             {
-                Console.WriteLine("Valor deposito inicial");
-                deposito = Double.Parse(Console.ReadLine());
-                conta.Deposito(deposito);
-                Console.WriteLine("Dados da conta atualizados");
-                Console.WriteLine(conta);
-                Console.WriteLine();
+                vet[i] = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
+                Console.WriteLine($"Posicao do vetor '{i}' = '{vet.GetValue(i)}'");
             }
-            
-                Console.WriteLine("Digite valor que deseja depositar");
-                deposito = Double.Parse(Console.ReadLine());
-                conta.Deposito(deposito);
-                Console.WriteLine("Dados da conta atualizados");
-                Console.WriteLine(conta);
 
-                Console.WriteLine();
+            double soma = 0.0;
 
-                Console.WriteLine("Entre com um valor para saque...");
-                double saque = Double.Parse(Console.ReadLine());
-                conta.Saque(saque);
-                Console.WriteLine("Dados da conta atualizados");
-                Console.WriteLine(conta);
+            for (int i = 0; i < n; i++)
+            {
+                soma += vet[i];
+            }
+
+            double avg = soma / 2;
+
+            Console.WriteLine($"Media das alturas {avg.ToString("F2", CultureInfo.InvariantCulture)}");
 
             #endregion
         }
