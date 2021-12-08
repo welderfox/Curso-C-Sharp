@@ -159,30 +159,63 @@ namespace Curso
 
             #endregion
 
-            #region Vetores
+            #region Vetores 1
 
-            Console.WriteLine("Digite o tamanho do vetor");
+            //Console.WriteLine("Digite o tamanho do vetor");
+            //int n = int.Parse(Console.ReadLine());
+
+            ////Declarando vetor
+            //double[] vet = new double[n];
+
+            //for (int i = 0; i < n; i++)
+            //{
+            //    vet[i] = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
+            //    Console.WriteLine($"Posicao do vetor '{i}' = '{vet.GetValue(i)}'");
+            //}
+
+            //double soma = 0.0;
+
+            //for (int i = 0; i < n; i++)
+            //{
+            //    soma += vet[i];
+            //}
+
+            //double avg = soma / 2;
+
+            //Console.WriteLine($"Media das alturas {avg.ToString("F2", CultureInfo.InvariantCulture)}");
+
+            #endregion
+
+            #region Vetores Exercicio
+
             int n = int.Parse(Console.ReadLine());
 
-            //Declarando vetor
-            double[] vet = new double[n];
+            Produto[] produtos = new Produto[n];
 
             for (int i = 0; i < n; i++)
             {
-                vet[i] = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
-                Console.WriteLine($"Posicao do vetor '{i}' = '{vet.GetValue(i)}'");
+                Console.WriteLine("Nome do produto");
+                string nome = Console.ReadLine();
+                Console.WriteLine("Preco produto");
+                double preco = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
+
+                produtos[i] = new Produto
+                {
+                    Nome = nome,
+                    Preco = preco
+                };
             }
 
-            double soma = 0.0;
+            double precoMedio = 0.0;
 
             for (int i = 0; i < n; i++)
             {
-                soma += vet[i];
+                precoMedio += produtos[i].Preco;
             }
 
-            double avg = soma / 2;
+            double media = precoMedio / n;
 
-            Console.WriteLine($"Media das alturas {avg.ToString("F2", CultureInfo.InvariantCulture)}");
+            Console.WriteLine($"Preco medio {media.ToString("F2", CultureInfo.InvariantCulture)}");
 
             #endregion
         }
