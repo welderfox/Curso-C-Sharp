@@ -7,6 +7,21 @@ namespace Curso
     {
         static void Main(string[] args)
         {
+            #region Estrutura condicional
+            int hora;
+            Console.WriteLine("Digite a Hora no formatho HH");
+            hora = int.Parse(Console.ReadLine());
+
+            if (hora < 12)
+            {
+                Console.WriteLine("Bom dia!!");
+            }
+            else 
+            {
+                Console.WriteLine("Boa tarde!!");
+            }
+
+            #endregion
 
             #region Triangulo
 
@@ -188,34 +203,34 @@ namespace Curso
 
             #region Vetores Exercicio
 
-            int n = int.Parse(Console.ReadLine());
+            //int n = int.Parse(Console.ReadLine());
 
-            Produto[] produtos = new Produto[n];
+            //Produto[] produtos = new Produto[n];
 
-            for (int i = 0; i < n; i++)
-            {
-                Console.WriteLine("Nome do produto");
-                string nome = Console.ReadLine();
-                Console.WriteLine("Preco produto");
-                double preco = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
+            //for (int i = 0; i < n; i++)
+            //{
+            //    Console.WriteLine("Nome do produto");
+            //    string nome = Console.ReadLine();
+            //    Console.WriteLine("Preco produto");
+            //    double preco = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
 
-                produtos[i] = new Produto
-                {
-                    Nome = nome,
-                    Preco = preco
-                };
-            }
+            //    produtos[i] = new Produto
+            //    {
+            //        Nome = nome,
+            //        Preco = preco
+            //    };
+            //}
 
-            double precoMedio = 0.0;
+            //double precoMedio = 0.0;
 
-            for (int i = 0; i < n; i++)
-            {
-                precoMedio += produtos[i].Preco;
-            }
+            //for (int i = 0; i < n; i++)
+            //{
+            //    precoMedio += produtos[i].Preco;
+            //}
 
-            double media = precoMedio / n;
+            //double media = precoMedio / n;
 
-            Console.WriteLine($"Preco medio {media.ToString("F2", CultureInfo.InvariantCulture)}");
+            //Console.WriteLine($"Preco medio {media.ToString("F2", CultureInfo.InvariantCulture)}");
 
             #endregion
         }
