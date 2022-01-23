@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Globalization;
 
 namespace Curso
 {
@@ -233,6 +232,64 @@ namespace Curso
             //Console.WriteLine($"Preco medio {media.ToString("F2", CultureInfo.InvariantCulture)}");
 
             #endregion
+
+            #region Exercicio proposto
+
+            Estudante[] estudantes = new Estudante[10];
+
+            Console.WriteLine("Quantos quartos serão alugados?");
+            int n = int.Parse(Console.ReadLine());
+            //int n = int.Parse(Console.ReadLine());
+
+            for (int i = 0; i < n; i++)
+            {
+                Console.WriteLine();
+                Console.WriteLine($"Aluguel #{i}:");
+                Console.WriteLine("Nome: ");
+                string nome = Console.ReadLine();
+                Console.WriteLine("Email: ");
+                string email = Console.ReadLine();
+                Console.WriteLine("Quarto: ");
+                int quarto = int.Parse(Console.ReadLine());
+            //Produto[] produtos = new Produto[n];
+
+            //for (int i = 0; i < n; i++)
+            //{
+            //    Console.WriteLine("Nome do produto");
+            //    string nome = Console.ReadLine();
+            //    Console.WriteLine("Preco produto");
+            //    double preco = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
+
+                estudantes[quarto] = new Estudante(nome, email);
+            }
+            Console.WriteLine();
+            Console.WriteLine("Quartos ocupados:");
+            for (int i = 0; i < 10; i++)
+            {
+                if (estudantes[i] != null)
+                {
+                    Console.WriteLine(i + ": " + estudantes[i]);
+                }
+            }
+            //    produtos[i] = new Produto
+            //    {
+            //        Nome = nome,
+            //        Preco = preco
+            //    };
+            //}
+
+            //double precoMedio = 0.0;
+
+            //for (int i = 0; i < n; i++)
+            //{
+            //    precoMedio += produtos[i].Preco;
+            //}
+
+            #endregion
+            //double media = precoMedio / n;
+
+            //Console.WriteLine($"Preco medio {media.ToString("F2", CultureInfo.InvariantCulture)}");
+
         }
     }
 }
