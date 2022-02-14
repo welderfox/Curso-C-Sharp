@@ -7,18 +7,19 @@ namespace Curso
         static void Main(string[] args)
         {
             #region Estrutura condicional
-            int hora;
-            Console.WriteLine("Digite a Hora no formatho HH");
-            hora = int.Parse(Console.ReadLine());
 
-            if (hora < 12)
-            {
-                Console.WriteLine("Bom dia!!");
-            }
-            else 
-            {
-                Console.WriteLine("Boa tarde!!");
-            }
+            //int hora;
+            //Console.WriteLine("Digite a Hora no formatho HH");
+            //hora = int.Parse(Console.ReadLine());
+
+            //if (hora < 12)
+            //{
+            //    Console.WriteLine("Bom dia!!");
+            //}
+            //else 
+            //{
+            //    Console.WriteLine("Boa tarde!!");
+            //}
 
             #endregion
 
@@ -235,22 +236,22 @@ namespace Curso
 
             #region Exercicio proposto
 
-            Estudante[] estudantes = new Estudante[10];
+            //Estudante[] estudantes = new Estudante[10];
 
-            Console.WriteLine("Quantos quartos serão alugados?");
-            int n = int.Parse(Console.ReadLine());
+            //Console.WriteLine("Quantos quartos serão alugados?");
+            //int n = int.Parse(Console.ReadLine());
             //int n = int.Parse(Console.ReadLine());
 
-            for (int i = 0; i < n; i++)
-            {
-                Console.WriteLine();
-                Console.WriteLine($"Aluguel #{i}:");
-                Console.WriteLine("Nome: ");
-                string nome = Console.ReadLine();
-                Console.WriteLine("Email: ");
-                string email = Console.ReadLine();
-                Console.WriteLine("Quarto: ");
-                int quarto = int.Parse(Console.ReadLine());
+            //for (int i = 0; i < n; i++)
+            //{
+            //    Console.WriteLine();
+            //    Console.WriteLine($"Aluguel #{i}:");
+            //    Console.WriteLine("Nome: ");
+            //    string nome = Console.ReadLine();
+            //    Console.WriteLine("Email: ");
+            //    string email = Console.ReadLine();
+            //    Console.WriteLine("Quarto: ");
+            //    int quarto = int.Parse(Console.ReadLine());
             //Produto[] produtos = new Produto[n];
 
             //for (int i = 0; i < n; i++)
@@ -260,17 +261,17 @@ namespace Curso
             //    Console.WriteLine("Preco produto");
             //    double preco = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
 
-                estudantes[quarto] = new Estudante(nome, email);
-            }
-            Console.WriteLine();
-            Console.WriteLine("Quartos ocupados:");
-            for (int i = 0; i < 10; i++)
-            {
-                if (estudantes[i] != null)
-                {
-                    Console.WriteLine(i + ": " + estudantes[i]);
-                }
-            }
+            //    estudantes[quarto] = new Estudante(nome, email);
+            //}
+            //Console.WriteLine();
+            //Console.WriteLine("Quartos ocupados:");
+            //for (int i = 0; i < 10; i++)
+            //{
+            //    if (estudantes[i] != null)
+            //    {
+            //        Console.WriteLine(i + ": " + estudantes[i]);
+            //    }
+            //}
             //    produtos[i] = new Produto
             //    {
             //        Nome = nome,
