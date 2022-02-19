@@ -199,6 +199,30 @@ namespace Curso
 
             //Console.WriteLine($"Media das alturas {avg.ToString("F2", CultureInfo.InvariantCulture)}");
 
+
+            int N;
+            int[] vet;
+
+            N = int.Parse(Console.ReadLine());
+
+            vet = new int[N];
+
+            string[] s = Console.ReadLine().Split(' ');
+
+            for (int i = 0; i < N; i++)
+            {
+                vet[i] = int.Parse(s[i]);
+            }
+
+            //Imprimir somente numeros negativos
+            for (int i = 0; i < N; i++)
+            {
+                if (vet[i] < 0)
+                {
+                    Console.WriteLine(vet[i]);
+                }
+            }
+
             #endregion
 
             #region Vetores Exercicio
@@ -286,11 +310,12 @@ namespace Curso
             //    precoMedio += produtos[i].Preco;
             //}
 
-            #endregion
+
             //double media = precoMedio / n;
 
             //Console.WriteLine($"Preco medio {media.ToString("F2", CultureInfo.InvariantCulture)}");
 
+            #endregion
         }
     }
 }
