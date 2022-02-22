@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Globalization;
 
 namespace Curso
 {
@@ -200,29 +201,68 @@ namespace Curso
             //Console.WriteLine($"Media das alturas {avg.ToString("F2", CultureInfo.InvariantCulture)}");
 
 
-            int N;
-            int[] vet;
+            //int N;
+            //int[] vet;
 
+            //N = int.Parse(Console.ReadLine());
+
+            //vet = new int[N];
+
+            //string[] s = Console.ReadLine().Split(' ');
+
+            //for (int i = 0; i < N; i++)
+            //{
+            //    vet[i] = int.Parse(s[i]);
+            //}
+
+            ////Imprimir somente numeros negativos
+            //for (int i = 0; i < N; i++)
+            //{
+            //    if (vet[i] < 0)
+            //    {
+            //        Console.WriteLine(vet[i]);
+            //    }
+            //}
+
+            int N;
             N = int.Parse(Console.ReadLine());
 
-            vet = new int[N];
+            string[] nomes = new string[N];
+            int[] idades = new int[N];
+            double[] alturas = new double[N];
 
-            string[] s = Console.ReadLine().Split(' ');
-
+            //Leitura doas dados
             for (int i = 0; i < N; i++)
             {
-                vet[i] = int.Parse(s[i]);
+                //Vetor Auxiliar
+                string[] s = Console.ReadLine().Split(' ');
+                nomes[i] = s[0];
+                idades[i] = int.Parse(s[1]);
+                alturas[i] = double.Parse(s[3], CultureInfo.InvariantCulture);
             }
 
-            //Imprimir somente numeros negativos
+            //Altura media
+            double soma = 0.0;
             for (int i = 0; i < N; i++)
             {
-                if (vet[i] < 0)
-                {
-                    Console.WriteLine(vet[i]);
-                }
+                soma = soma + alturas[i];
             }
 
+            double media = soma / N;
+
+            Console.WriteLine("Altura media" + media.ToString("F2", CultureInfo.InvariantCulture));
+
+            //Porcentagem
+            int cont = 0;
+            for (int i = 0; i < N; i++)
+            {
+                if (idades[i] < 16)
+                    cont++;
+            }
+
+            double prcent = (double)cont / N * 100.0;
+
+            Console.WriteLine("Pessoa com menos de 16 anos : " + prcent.ToString("F2", CultureInfo.InvariantCulture));
             #endregion
 
             #region Vetores Exercicio
