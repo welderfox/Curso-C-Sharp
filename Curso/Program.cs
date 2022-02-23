@@ -224,45 +224,46 @@ namespace Curso
             //    }
             //}
 
-            int N;
-            N = int.Parse(Console.ReadLine());
+            //int N;
+            //N = int.Parse(Console.ReadLine());
 
-            string[] nomes = new string[N];
-            int[] idades = new int[N];
-            double[] alturas = new double[N];
+            //string[] nomes = new string[N];
+            //int[] idades = new int[N];
+            //double[] alturas = new double[N];
 
-            //Leitura doas dados
-            for (int i = 0; i < N; i++)
-            {
-                //Vetor Auxiliar
-                string[] s = Console.ReadLine().Split(' ');
-                nomes[i] = s[0];
-                idades[i] = int.Parse(s[1]);
-                alturas[i] = double.Parse(s[3], CultureInfo.InvariantCulture);
-            }
+            ////Leitura doas dados
+            //for (int i = 0; i < N; i++)
+            //{
+            //    //Vetor Auxiliar
+            //    string[] s = Console.ReadLine().Split(' ');
+            //    nomes[i] = s[0];
+            //    idades[i] = int.Parse(s[1]);
+            //    alturas[i] = double.Parse(s[3], CultureInfo.InvariantCulture);
+            //}
 
-            //Altura media
-            double soma = 0.0;
-            for (int i = 0; i < N; i++)
-            {
-                soma = soma + alturas[i];
-            }
+            ////Altura media
+            //double soma = 0.0;
+            //for (int i = 0; i < N; i++)
+            //{
+            //    soma = soma + alturas[i];
+            //}
 
-            double media = soma / N;
+            //double media = soma / N;
 
-            Console.WriteLine("Altura media" + media.ToString("F2", CultureInfo.InvariantCulture));
+            //Console.WriteLine("Altura media" + media.ToString("F2", CultureInfo.InvariantCulture));
 
-            //Porcentagem
-            int cont = 0;
-            for (int i = 0; i < N; i++)
-            {
-                if (idades[i] < 16)
-                    cont++;
-            }
+            ////Porcentagem
+            //int cont = 0;
+            //for (int i = 0; i < N; i++)
+            //{
+            //    if (idades[i] < 16)
+            //        cont++;
+            //}
 
-            double prcent = (double)cont / N * 100.0;
+            //double prcent = (double)cont / N * 100.0;
 
-            Console.WriteLine("Pessoa com menos de 16 anos : " + prcent.ToString("F2", CultureInfo.InvariantCulture));
+            //Console.WriteLine("Pessoa com menos de 16 anos : " + prcent.ToString("F2", CultureInfo.InvariantCulture));
+
             #endregion
 
             #region Vetores Exercicio
@@ -354,6 +355,54 @@ namespace Curso
             //double media = precoMedio / n;
 
             //Console.WriteLine($"Preco medio {media.ToString("F2", CultureInfo.InvariantCulture)}");
+
+            #endregion
+
+
+            #region Matrizes
+
+            int N;
+            //Declarando uma Matriz
+            int[,] A;
+
+            N = int.Parse(Console.ReadLine());
+
+            A = new int[N, N];
+
+            for (int i = 0; i < N; i++)//For para percorrer as linhas da matriz
+            {
+                string[] s = Console.ReadLine().Split(' ');
+
+                for (int j = 0; j < N; j++)//For para percorrer as colunas da matriz
+                {
+                    A[i, j] = int.Parse(s[j]);
+                }
+            }
+
+            //Exibir diagonal principal
+            Console.WriteLine("Diagonal principal...");
+           
+            for (int i = 0; i < N; i++)
+            {
+                Console.Write(A[i, i] + " ");
+                Console.WriteLine();
+            }
+            //Quantidade de numeros negativos
+
+            int cont = 0;
+
+            for (int i = 0; i < N; i++)
+            {
+                for (int j = 0; j < N; j++)
+                {
+                    if (A[i, j] < 0)
+                    {
+                        cont++;
+                    }
+                }
+            }
+
+            Console.WriteLine("Quantidades de negativos:" + cont);
 
             #endregion
         }
