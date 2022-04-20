@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Globalization;
 
 namespace Curso
 {
@@ -6,6 +7,22 @@ namespace Curso
     {
         static void Main(string[] args)
         {
+            #region Estrutura condicional
+
+            //int hora;
+            //Console.WriteLine("Digite a Hora no formatho HH");
+            //hora = int.Parse(Console.ReadLine());
+
+            //if (hora < 12)
+            //{
+            //    Console.WriteLine("Bom dia!!");
+            //}
+            //else 
+            //{
+            //    Console.WriteLine("Boa tarde!!");
+            //}
+
+            #endregion
 
             #region Triangulo
 
@@ -183,6 +200,70 @@ namespace Curso
 
             //Console.WriteLine($"Media das alturas {avg.ToString("F2", CultureInfo.InvariantCulture)}");
 
+
+            //int N;
+            //int[] vet;
+
+            //N = int.Parse(Console.ReadLine());
+
+            //vet = new int[N];
+
+            //string[] s = Console.ReadLine().Split(' ');
+
+            //for (int i = 0; i < N; i++)
+            //{
+            //    vet[i] = int.Parse(s[i]);
+            //}
+
+            ////Imprimir somente numeros negativos
+            //for (int i = 0; i < N; i++)
+            //{
+            //    if (vet[i] < 0)
+            //    {
+            //        Console.WriteLine(vet[i]);
+            //    }
+            //}
+
+            //int N;
+            //N = int.Parse(Console.ReadLine());
+
+            //string[] nomes = new string[N];
+            //int[] idades = new int[N];
+            //double[] alturas = new double[N];
+
+            ////Leitura doas dados
+            //for (int i = 0; i < N; i++)
+            //{
+            //    //Vetor Auxiliar
+            //    string[] s = Console.ReadLine().Split(' ');
+            //    nomes[i] = s[0];
+            //    idades[i] = int.Parse(s[1]);
+            //    alturas[i] = double.Parse(s[3], CultureInfo.InvariantCulture);
+            //}
+
+            ////Altura media
+            //double soma = 0.0;
+            //for (int i = 0; i < N; i++)
+            //{
+            //    soma = soma + alturas[i];
+            //}
+
+            //double media = soma / N;
+
+            //Console.WriteLine("Altura media" + media.ToString("F2", CultureInfo.InvariantCulture));
+
+            ////Porcentagem
+            //int cont = 0;
+            //for (int i = 0; i < N; i++)
+            //{
+            //    if (idades[i] < 16)
+            //        cont++;
+            //}
+
+            //double prcent = (double)cont / N * 100.0;
+
+            //Console.WriteLine("Pessoa com menos de 16 anos : " + prcent.ToString("F2", CultureInfo.InvariantCulture));
+
             #endregion
 
             #region Vetores Exercicio
@@ -224,6 +305,7 @@ namespace Curso
 
             //Console.WriteLine("Quantos quartos serão alugados?");
             //int n = int.Parse(Console.ReadLine());
+            //int n = int.Parse(Console.ReadLine());
 
             //for (int i = 0; i < n; i++)
             //{
@@ -235,6 +317,14 @@ namespace Curso
             //    string email = Console.ReadLine();
             //    Console.WriteLine("Quarto: ");
             //    int quarto = int.Parse(Console.ReadLine());
+            //Produto[] produtos = new Produto[n];
+
+            //for (int i = 0; i < n; i++)
+            //{
+            //    Console.WriteLine("Nome do produto");
+            //    string nome = Console.ReadLine();
+            //    Console.WriteLine("Preco produto");
+            //    double preco = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
 
             //    estudantes[quarto] = new Estudante(nome, email);
             //}
@@ -247,65 +337,74 @@ namespace Curso
             //        Console.WriteLine(i + ": " + estudantes[i]);
             //    }
             //}
+            //    produtos[i] = new Produto
+            //    {
+            //        Nome = nome,
+            //        Preco = preco
+            //    };
+            //}
 
+            //double precoMedio = 0.0;
+
+            //for (int i = 0; i < n; i++)
+            //{
+            //    precoMedio += produtos[i].Preco;
+            //}
+
+
+            //double media = precoMedio / n;
+
+            //Console.WriteLine($"Preco medio {media.ToString("F2", CultureInfo.InvariantCulture)}");
 
             #endregion
 
-            #region Operado de coalescencia nula '??'
 
-            /// <summary>
-            /// O operador de coalescência nula ?? retornará o valor do operando esquerdo se não for null;
-            /// caso contrário, ele avaliará o operando direito e retornará seu resultado. 
-            /// O operador ?? não avaliará o operando do lado direito se o operando esquerdo for avaliado como não nulo.
-            /// </summary> 
+            #region Matrizes
 
-            //bool? a =  true;
-            //bool? b = false;
+            int N;
+            //Declarando uma Matriz
+            int[,] A;
 
-            //var x = b ?? a;
+            N = int.Parse(Console.ReadLine());
 
-            //Console.WriteLine(x);
+            A = new int[N, N];
 
-            #endregion
-
-            #region Sintaxe alternativa - switch-case
-
-            int x = int.Parse(Console.ReadLine());
-            string day;
-
-            switch (x)
+            for (int i = 0; i < N; i++)//For para percorrer as linhas da matriz
             {
-                case 1:
-                    day = "Domingo";
-                    break;
-                case 2:
-                    day = "Segunda-Feira";
-                    break;
-                case 3:
-                    day = "Terça-Feira";
-                    break;
-                case 4:
-                    day = "Quarta-Feira";
-                    break;
-                case 5:
-                    day = "Quinta-Feira";
-                    break;
-                case 6:
-                    day = "Sexta-Feira";
-                    break;
-                case 7:
-                    day = "Sabado";
-                    break;
-                default:
-                    day = "Valor não tratado";
-                    break;
+                string[] s = Console.ReadLine().Split(' ');
+
+                for (int j = 0; j < N; j++)//For para percorrer as colunas da matriz
+                {
+                    A[i, j] = int.Parse(s[j]);
+                }
             }
 
-            Console.WriteLine("Dia da semana: " + day);
+            //Exibir diagonal principal
+            Console.WriteLine("Diagonal principal...");
+           
+            for (int i = 0; i < N; i++)
+            {
+                Console.Write(A[i, i] + " ");
+                Console.WriteLine();
+            }
+            //Quantidade de numeros negativos
+
+            int cont = 0;
+
+            for (int i = 0; i < N; i++)
+            {
+                for (int j = 0; j < N; j++)
+                {
+                    if (A[i, j] < 0)
+                    {
+                        cont++;
+                    }
+                }
+            }
+
+            Console.WriteLine("Quantidades de negativos:" + cont);
 
             #endregion
-
-
         }
     }
 }
