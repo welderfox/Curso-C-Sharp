@@ -360,48 +360,48 @@ namespace Curso
 
             #region Matrizes
 
-            int N;
-            //Declarando uma Matriz
-            int[,] A;
+            //int N;
+            ////Declarando uma Matriz
+            //int[,] A;
 
-            N = int.Parse(Console.ReadLine());
+            //N = int.Parse(Console.ReadLine());
 
-            A = new int[N, N];
+            //A = new int[N, N];
 
-            for (int i = 0; i < N; i++)//For para percorrer as linhas da matriz
-            {
-                string[] s = Console.ReadLine().Split(' ');
+            //for (int i = 0; i < N; i++)//For para percorrer as linhas da matriz
+            //{
+            //    string[] s = Console.ReadLine().Split(' ');
 
-                for (int j = 0; j < N; j++)//For para percorrer as colunas da matriz
-                {
-                    A[i, j] = int.Parse(s[j]);
-                }
-            }
+            //    for (int j = 0; j < N; j++)//For para percorrer as colunas da matriz
+            //    {
+            //        A[i, j] = int.Parse(s[j]);
+            //    }
+            //}
 
-            //Exibir diagonal principal
-            Console.WriteLine("Diagonal principal...");
-           
-            for (int i = 0; i < N; i++)
-            {
-                Console.Write(A[i, i] + " ");
-                Console.WriteLine();
-            }
-            //Quantidade de numeros negativos
+            ////Exibir diagonal principal
+            //Console.WriteLine("Diagonal principal...");
 
-            int cont = 0;
+            //for (int i = 0; i < N; i++)
+            //{
+            //    Console.Write(A[i, i] + " ");
+            //    Console.WriteLine();
+            //}
+            ////Quantidade de numeros negativos
 
-            for (int i = 0; i < N; i++)
-            {
-                for (int j = 0; j < N; j++)
-                {
-                    if (A[i, j] < 0)
-                    {
-                        cont++;
-                    }
-                }
-            }
+            //int cont = 0;
 
-            Console.WriteLine("Quantidades de negativos:" + cont);
+            //for (int i = 0; i < N; i++)
+            //{
+            //    for (int j = 0; j < N; j++)
+            //    {
+            //        if (A[i, j] < 0)
+            //        {
+            //            cont++;
+            //        }
+            //    }
+            //}
+
+            //Console.WriteLine("Quantidades de negativos:" + cont);
 
             #endregion
 
@@ -424,38 +424,48 @@ namespace Curso
 
             #region Sintaxe alternativa - switch-case
 
-            int x = int.Parse(Console.ReadLine());
-            string day;
+            //int x = int.Parse(Console.ReadLine());
+            //string day;
 
-            switch (x)
-            {
-                case 1:
-                    day = "Domingo";
-                    break;
-                case 2:
-                    day = "Segunda-Feira";
-                    break;
-                case 3:
-                    day = "Terça-Feira";
-                    break;
-                case 4:
-                    day = "Quarta-Feira";
-                    break;
-                case 5:
-                    day = "Quinta-Feira";
-                    break;
-                case 6:
-                    day = "Sexta-Feira";
-                    break;
-                case 7:
-                    day = "Sabado";
-                    break;
-                default:
-                    day = "Valor não tratado";
-                    break;
-            }
+            //switch (x)
+            //{
+            //    case 1:
+            //        day = "Domingo";
+            //        break;
+            //    case 2:
+            //        day = "Segunda-Feira";
+            //        break;
+            //    case 3:
+            //        day = "Terça-Feira";
+            //        break;
+            //    case 4:
+            //        day = "Quarta-Feira";
+            //        break;
+            //    case 5:
+            //        day = "Quinta-Feira";
+            //        break;
+            //    case 6:
+            //        day = "Sexta-Feira";
+            //        break;
+            //    case 7:
+            //        day = "Sabado";
+            //        break;
+            //    default:
+            //        day = "Valor não tratado";
+            //        break;
+            //}
 
-            Console.WriteLine("Dia da semana: " + day);
+            //Console.WriteLine("Dia da semana: " + day);
+
+            #endregion
+
+            #region Expressão condicional ternária
+
+            double preco = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
+
+            double desconto = (preco < 20.0) ? preco * 0.1 : preco * 0.05;
+
+            Console.WriteLine("Desconto: " + desconto);
 
             #endregion
         }
