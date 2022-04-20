@@ -220,34 +220,88 @@ namespace Curso
 
             #region Exercicio proposto
 
-            Estudante[] estudantes = new Estudante[10];
+            //Estudante[] estudantes = new Estudante[10];
 
-            Console.WriteLine("Quantos quartos serão alugados?");
-            int n = int.Parse(Console.ReadLine());
+            //Console.WriteLine("Quantos quartos serão alugados?");
+            //int n = int.Parse(Console.ReadLine());
 
-            for (int i = 0; i < n; i++)
+            //for (int i = 0; i < n; i++)
+            //{
+            //    Console.WriteLine();
+            //    Console.WriteLine($"Aluguel #{i}:");
+            //    Console.WriteLine("Nome: ");
+            //    string nome = Console.ReadLine();
+            //    Console.WriteLine("Email: ");
+            //    string email = Console.ReadLine();
+            //    Console.WriteLine("Quarto: ");
+            //    int quarto = int.Parse(Console.ReadLine());
+
+            //    estudantes[quarto] = new Estudante(nome, email);
+            //}
+            //Console.WriteLine();
+            //Console.WriteLine("Quartos ocupados:");
+            //for (int i = 0; i < 10; i++)
+            //{
+            //    if (estudantes[i] != null)
+            //    {
+            //        Console.WriteLine(i + ": " + estudantes[i]);
+            //    }
+            //}
+
+
+            #endregion
+
+            #region Operado de coalescencia nula '??'
+
+            /// <summary>
+            /// O operador de coalescência nula ?? retornará o valor do operando esquerdo se não for null;
+            /// caso contrário, ele avaliará o operando direito e retornará seu resultado. 
+            /// O operador ?? não avaliará o operando do lado direito se o operando esquerdo for avaliado como não nulo.
+            /// </summary> 
+
+            //bool? a =  true;
+            //bool? b = false;
+
+            //var x = b ?? a;
+
+            //Console.WriteLine(x);
+
+            #endregion
+
+            #region Sintaxe alternativa - switch-case
+
+            int x = int.Parse(Console.ReadLine());
+            string day;
+
+            switch (x)
             {
-                Console.WriteLine();
-                Console.WriteLine($"Aluguel #{i}:");
-                Console.WriteLine("Nome: ");
-                string nome = Console.ReadLine();
-                Console.WriteLine("Email: ");
-                string email = Console.ReadLine();
-                Console.WriteLine("Quarto: ");
-                int quarto = int.Parse(Console.ReadLine());
-
-                estudantes[quarto] = new Estudante(nome, email);
+                case 1:
+                    day = "Domingo";
+                    break;
+                case 2:
+                    day = "Segunda-Feira";
+                    break;
+                case 3:
+                    day = "Terça-Feira";
+                    break;
+                case 4:
+                    day = "Quarta-Feira";
+                    break;
+                case 5:
+                    day = "Quinta-Feira";
+                    break;
+                case 6:
+                    day = "Sexta-Feira";
+                    break;
+                case 7:
+                    day = "Sabado";
+                    break;
+                default:
+                    day = "Valor não tratado";
+                    break;
             }
-            Console.WriteLine();
-            Console.WriteLine("Quartos ocupados:");
-            for (int i = 0; i < 10; i++)
-            {
-                if (estudantes[i] != null)
-                {
-                    Console.WriteLine(i + ": " + estudantes[i]);
-                }
-            }
 
+            Console.WriteLine("Dia da semana: " + day);
 
             #endregion
 
