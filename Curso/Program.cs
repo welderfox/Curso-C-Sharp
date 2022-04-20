@@ -358,7 +358,6 @@ namespace Curso
 
             #endregion
 
-
             #region Matrizes
 
             int N;
@@ -403,6 +402,60 @@ namespace Curso
             }
 
             Console.WriteLine("Quantidades de negativos:" + cont);
+
+            #endregion
+
+            #region Operado de coalescencia nula '??'
+
+            /// <summary>
+            /// O operador de coalescência nula ?? retornará o valor do operando esquerdo se não for null;
+            /// caso contrário, ele avaliará o operando direito e retornará seu resultado. 
+            /// O operador ?? não avaliará o operando do lado direito se o operando esquerdo for avaliado como não nulo.
+            /// </summary> 
+
+            //bool? a =  true;
+            //bool? b = false;
+
+            //var x = b ?? a;
+
+            //Console.WriteLine(x);
+
+            #endregion
+
+            #region Sintaxe alternativa - switch-case
+
+            int x = int.Parse(Console.ReadLine());
+            string day;
+
+            switch (x)
+            {
+                case 1:
+                    day = "Domingo";
+                    break;
+                case 2:
+                    day = "Segunda-Feira";
+                    break;
+                case 3:
+                    day = "Terça-Feira";
+                    break;
+                case 4:
+                    day = "Quarta-Feira";
+                    break;
+                case 5:
+                    day = "Quinta-Feira";
+                    break;
+                case 6:
+                    day = "Sexta-Feira";
+                    break;
+                case 7:
+                    day = "Sabado";
+                    break;
+                default:
+                    day = "Valor não tratado";
+                    break;
+            }
+
+            Console.WriteLine("Dia da semana: " + day);
 
             #endregion
         }
