@@ -461,11 +461,11 @@ namespace Curso
 
             #region Expressão condicional ternária
 
-            double preco = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
+            //double preco = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
 
-            double desconto = (preco < 20.0) ? preco * 0.1 : preco * 0.05;
+            //double desconto = (preco < 20.0) ? preco * 0.1 : preco * 0.05;
 
-            Console.WriteLine("Desconto: " + desconto);
+            //Console.WriteLine("Desconto: " + desconto);
 
             #endregion
         }
