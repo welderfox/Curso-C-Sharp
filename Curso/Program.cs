@@ -131,7 +131,7 @@ namespace Curso
             //Console.WriteLine();
             //Console.WriteLine($"{retangulo}");
 
-            #endregion
+            #endregion 
 
             #region Conta bancaria
 
@@ -466,6 +466,26 @@ namespace Curso
             //double desconto = (preco < 20.0) ? preco * 0.1 : preco * 0.05;
 
             //Console.WriteLine("Desconto: " + desconto);
+
+            #endregion
+
+            #region DateTime
+
+            DateTime date = DateTime.Now;
+            Console.WriteLine("Agora são extamente: " + date);
+            Console.WriteLine("Em Ticks: " + date.Ticks);
+
+            //Convertendo string para DateTime
+
+            DateTime dateString = DateTime.Parse("2022-04-02");
+            DateTime dateString1 = DateTime.Parse("04/02/2022");
+            //DateTime formatoExato = DateTime.ParseExact("04/02/2022 13:05:59", "dd/MM/yyyyy HH:MM:ss", CultureInfo.InvariantCulture);
+
+            Console.WriteLine("Data em formato stgring, convertido para DateTime: " + dateString);
+            Console.WriteLine("Data em formato stgring, convertido para DateTime: " + dateString1);
+            //Console.WriteLine("Data em formato exato: " + formatoExato);
+
+
 
             #endregion
         }
