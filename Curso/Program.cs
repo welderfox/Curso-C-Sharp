@@ -485,7 +485,21 @@ namespace Curso
             Console.WriteLine("Data em formato stgring, convertido para DateTime: " + dateString1);
             //Console.WriteLine("Data em formato exato: " + formatoExato);
 
+            #endregion
 
+            #region Git
+
+            /*
+              * git init
+              * git add. (stage)
+              * git status
+              * git commit -m "Mensagem"
+              * git branch -M main (branch padrão)
+              * git remote add origin git@github.com:user/usergithub.git "SSH"
+              * git push -u origin main (nome da branch) envia projeto 
+              * git log
+              * 
+            */
 
             #endregion
         }
