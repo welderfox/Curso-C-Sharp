@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Globalization;
+using Curso.Entities;
 
 namespace Curso
 {
@@ -471,19 +472,19 @@ namespace Curso
 
             #region DateTime
 
-            DateTime date = DateTime.Now;
-            Console.WriteLine("Agora são extamente: " + date);
-            Console.WriteLine("Em Ticks: " + date.Ticks);
+            //DateTime date = DateTime.Now;
+            //Console.WriteLine("Agora são extamente: " + date);
+            //Console.WriteLine("Em Ticks: " + date.Ticks);
 
-            //Convertendo string para DateTime
+            ////Convertendo string para DateTime
 
-            DateTime dateString = DateTime.Parse("2022-04-02");
-            DateTime dateString1 = DateTime.Parse("04/02/2022");
-            //DateTime formatoExato = DateTime.ParseExact("04/02/2022 13:05:59", "dd/MM/yyyyy HH:MM:ss", CultureInfo.InvariantCulture);
+            //DateTime dateString = DateTime.Parse("2022-04-02");
+            //DateTime dateString1 = DateTime.Parse("04/02/2022");
+            ////DateTime formatoExato = DateTime.ParseExact("04/02/2022 13:05:59", "dd/MM/yyyyy HH:MM:ss", CultureInfo.InvariantCulture);
 
-            Console.WriteLine("Data em formato stgring, convertido para DateTime: " + dateString);
-            Console.WriteLine("Data em formato stgring, convertido para DateTime: " + dateString1);
-            //Console.WriteLine("Data em formato exato: " + formatoExato);
+            //Console.WriteLine("Data em formato stgring, convertido para DateTime: " + dateString);
+            //Console.WriteLine("Data em formato stgring, convertido para DateTime: " + dateString1);
+            ////Console.WriteLine("Data em formato exato: " + formatoExato);
 
             #endregion
 
@@ -506,6 +507,21 @@ namespace Curso
               * git remote add set-url <repositorio> inviar (mudar projeto para outro repositorio remoto)
               * 
             */
+
+            #endregion
+
+            #region Enum (Enumercoes)
+
+            int id = 10;
+            var moment = DateTime.Now;
+
+
+            /*Tipo especial que serve para especificar de forma literal um conjuto de constantes relacionadas */
+            Order ordem = new Order( id, moment, Order.OrderStatus.PedingPayment);
+
+            Console.WriteLine($"Pedido: '{ordem.Id}' -  iniciado: '{ordem.Moment}' - Status: '{ordem.Status}'");
+
+           
 
             #endregion
 
