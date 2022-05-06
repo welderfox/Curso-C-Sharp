@@ -496,12 +496,19 @@ namespace Curso
               * git commit -m "Mensagem"
               * git branch -M main (branch padrão)
               * git remote add origin git@github.com:user/usergithub.git "SSH"
-              * git push -u origin main (nome da branch) envia projeto 
-              * git log
+              * git push -u origin main (nome da branch) envia AS ALTERAÇÕES projeto 
+              * git log (verifica historico de versoes)
+              * git log --oneline (verifica historico de versoes resumido)
+              * git reset
+              * git clean -df
+              * git checkout -- .
+              * git reset --hard <codigo do comit>
+              * git remote add set-url <repositorio> inviar (mudar projeto para outro repositorio remoto)
               * 
             */
 
             #endregion
+
         }
     }
 }
