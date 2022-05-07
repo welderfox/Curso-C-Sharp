@@ -6,12 +6,15 @@ namespace Curso.Entities
 {
     public class Order
     {
+        public Order() { }
+
         public Order(int id, DateTime moment, OrderStatus status)
         {
             Id = id;
             Moment = moment;
             Status = status;
         }
+
 
         /*EXEMPLO DE ENUM*/
         public enum OrderStatus : short

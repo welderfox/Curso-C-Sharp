@@ -518,10 +518,18 @@ namespace Curso
 
             /*Tipo especial que serve para especificar de forma literal um conjuto de constantes relacionadas */
             Order ordem = new Order( id, moment, Order.OrderStatus.PedingPayment);
+            Order ordem1 = new Order
+            {
+                Id = 20,
+                Moment = DateTime.Now,
+                Status = Order.OrderStatus.Sipped
+            };
 
             Console.WriteLine($"Pedido: '{ordem.Id}' -  iniciado: '{ordem.Moment}' - Status: '{ordem.Status}'");
 
-           
+            Console.WriteLine($"Pedido: '{ordem1.Id}' -  iniciado: '{ordem1.Moment}' - Status: '{ordem1.Status}'");
+
+
 
             #endregion
 
