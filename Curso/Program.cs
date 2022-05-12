@@ -512,25 +512,43 @@ namespace Curso
 
             #region Enum (Enumercoes)
 
-            int id = 10;
-            var moment = DateTime.Now;
+            //int id = 10;
+            //var moment = DateTime.Now;
 
 
-            /*Tipo especial que serve para especificar de forma literal um conjuto de constantes relacionadas */
-            Order ordem = new Order( id, moment, Order.OrderStatus.PedingPayment);
-            Order ordem1 = new Order
-            {
-                Id = 20,
-                Moment = DateTime.Now,
-                Status = Order.OrderStatus.Sipped
-            };
+            ///*Tipo especial que serve para especificar de forma literal um conjuto de constantes relacionadas */
+            //Order ordem = new Order(id, moment, Order.OrderStatus.PedingPayment);
 
-            Console.WriteLine($"Pedido: '{ordem.Id}' -  iniciado: '{ordem.Moment}' - Status: '{ordem.Status}'");
+            //Order ordem1 = new Order
+            //{
+            //    Id = 20,
+            //    Moment = DateTime.Now,
+            //    Status = Order.OrderStatus.Sipped
+            //};
 
-            Console.WriteLine($"Pedido: '{ordem1.Id}' -  iniciado: '{ordem1.Moment}' - Status: '{ordem1.Status}'");
+            //Console.WriteLine($"Pedido: '{ordem.Id}' -  iniciado: '{ordem.Moment}' - Status: '{ordem.Status}'");
+
+            //Console.WriteLine($"Pedido: '{ordem1.Id}' -  iniciado: '{ordem1.Moment}' - Status: '{ordem1.Status}'");
 
 
 
+            #endregion
+
+            #region Exercicio Contrato (Worker)
+
+            Console.Write("Enter department's name: ");
+            string deptname = Console.ReadLine();
+            Console.WriteLine("Enter worker data: ");
+            Console.Write("Name: ");
+            string name = Console.ReadLine();
+            Console.Write("Level ( Junior/Intermerdiario/Senior)");
+            Worker.WorkerLevel level = Enum.Parse<Worker.WorkerLevel>(Console.ReadLine());
+            Console.Write("Base salary");
+            double salary = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
+
+            Department dep = new Department(deptname);
+
+            Worker worker = new Worker(name, level, salary, dep);
             #endregion
 
         }
