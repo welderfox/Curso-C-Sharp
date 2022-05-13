@@ -538,17 +538,52 @@ namespace Curso
 
             Console.Write("Enter department's name: ");
             string deptname = Console.ReadLine();
+
             Console.WriteLine("Enter worker data: ");
             Console.Write("Name: ");
             string name = Console.ReadLine();
+
             Console.Write("Level ( Junior/Intermerdiario/Senior)");
             Worker.WorkerLevel level = Enum.Parse<Worker.WorkerLevel>(Console.ReadLine());
+
             Console.Write("Base salary");
             double salary = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
 
             Department dep = new Department(deptname);
-
             Worker worker = new Worker(name, level, salary, dep);
+
+            Console.Write("how many contracts to this worker? ");
+            int n = int.Parse(Console.ReadLine());
+
+            for (int i = 1; i <= n; i++)
+            {
+                Console.Write($"Enter #{n} contract data: ");
+
+                Console.Write("Data (DD/MM/YYYY) : ");
+                DateTime date = DateTime.Parse(Console.ReadLine());
+
+                Console.Write("value per hours : ");
+                double value = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
+
+                Console.Write("Duration (hours) : ");
+                int hours = int.Parse(Console.ReadLine());
+
+
+                HourContract contrac = new HourContract(date, value, hours);
+
+                worker.AddContract(contrac);
+            }
+
+            Console.Write("Enter month and year to calculete income (MM/YYYY): ");
+            string mesAno = Console.ReadLine();
+
+            int mes = int.Parse(mesAno.Substring(0, 2));
+            int ano = int.Parse(mesAno.Substring(3));
+
+            Console.WriteLine($"Name: {worker.Nome}");
+            Console.WriteLine($"Departmente: {worker.Department.Nome}");
+            Console.WriteLine($"Income for: {mesAno} : {worker.Income(mes, ano)}" );
+
             #endregion
 
         }
