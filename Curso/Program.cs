@@ -1,6 +1,5 @@
 ﻿using System;
-using System.Globalization;
-using Curso.Entities;
+using Curso.Entities.Post;
 
 namespace Curso
 {
@@ -536,53 +535,91 @@ namespace Curso
 
             #region Exercicio Contrato (Worker)
 
-            Console.Write("Enter department's name: ");
-            string deptname = Console.ReadLine();
+            //Console.Write("Enter department's name: ");
+            //string deptname = Console.ReadLine();
 
-            Console.WriteLine("Enter worker data: ");
-            Console.Write("Name: ");
-            string name = Console.ReadLine();
+            //Console.WriteLine("Enter worker data: ");
+            //Console.Write("Name: ");
+            //string name = Console.ReadLine();
 
-            Console.Write("Level ( Junior/Intermerdiario/Senior)");
-            Worker.WorkerLevel level = Enum.Parse<Worker.WorkerLevel>(Console.ReadLine());
+            //Console.Write("Level ( Junior/Intermerdiario/Senior)");
+            //Worker.WorkerLevel level = Enum.Parse<Worker.WorkerLevel>(Console.ReadLine());
 
-            Console.Write("Base salary");
-            double salary = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
+            //Console.Write("Base salary");
+            //double salary = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
 
-            Department dep = new Department(deptname);
-            Worker worker = new Worker(name, level, salary, dep);
+            //Department dep = new Department(deptname);
+            //Worker worker = new Worker(name, level, salary, dep);
 
-            Console.Write("how many contracts to this worker? ");
-            int n = int.Parse(Console.ReadLine());
+            //Console.Write("how many contracts to this worker? ");
+            //int n = int.Parse(Console.ReadLine());
 
-            for (int i = 1; i <= n; i++)
-            {
-                Console.Write($"Enter #{n} contract data: ");
+            //for (int i = 1; i <= n; i++)
+            //{
+            //    Console.Write($"Enter #{n} contract data: ");
 
-                Console.Write("Data (DD/MM/YYYY) : ");
-                DateTime date = DateTime.Parse(Console.ReadLine());
+            //    Console.Write("Data (DD/MM/YYYY) : ");
+            //    DateTime date = DateTime.Parse(Console.ReadLine());
 
-                Console.Write("value per hours : ");
-                double value = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
+            //    Console.Write("value per hours : ");
+            //    double value = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
 
-                Console.Write("Duration (hours) : ");
-                int hours = int.Parse(Console.ReadLine());
+            //    Console.Write("Duration (hours) : ");
+            //    int hours = int.Parse(Console.ReadLine());
 
 
-                HourContract contrac = new HourContract(date, value, hours);
+            //    HourContract contrac = new HourContract(date, value, hours);
 
-                worker.AddContract(contrac);
-            }
+            //    worker.AddContract(contrac);
+            //}
 
-            Console.Write("Enter month and year to calculete income (MM/YYYY): ");
-            string mesAno = Console.ReadLine();
+            //Console.Write("Enter month and year to calculete income (MM/YYYY): ");
+            //string mesAno = Console.ReadLine();
 
-            int mes = int.Parse(mesAno.Substring(0, 2));
-            int ano = int.Parse(mesAno.Substring(3));
+            //int mes = int.Parse(mesAno.Substring(0, 2));
+            //int ano = int.Parse(mesAno.Substring(3));
 
-            Console.WriteLine($"Name: {worker.Nome}");
-            Console.WriteLine($"Departmente: {worker.Department.Nome}");
-            Console.WriteLine($"Income for: {mesAno} : {worker.Income(mes, ano)}" );
+            //Console.WriteLine($"Name: {worker.Nome}");
+            //Console.WriteLine($"Departmente: {worker.Department.Nome}");
+            //Console.WriteLine($"Income for: {mesAno} : {worker.Income(mes, ano)}" );
+
+            #endregion
+
+            #region Exercicio resolvido 2 (String Builder)
+
+            Comment comment1 = new Comment("Have a nice trip");
+            Comment comment2 = new Comment("Wow, awesome!!!");
+
+            Post post1 = new Post
+                (
+                    moment: DateTime.Parse("20/05/2022 13:05:00"),
+                    title: "Traveling to USA",
+                    content: "Visitando esse país maravilhoso",
+                    likes: 12
+                );
+
+            post1.AddComent(comment1);
+            post1.AddComent(comment2);
+
+
+            Comment comment3 = new Comment("Have a good night");
+            Comment comment4 = new Comment("May the force be whit you");
+
+            Post post2 = new Post
+                (
+                    moment: DateTime.Parse("20/05/2022 23:05:00"),
+                    title: "Good night guys",
+                    content: "See you tomorrow",
+                    likes: 12
+                );
+
+            post2.AddComent(comment3);
+            post2.AddComent(comment4);
+
+
+            Console.WriteLine(post1);
+            Console.WriteLine("");
+            Console.WriteLine(post2);
 
             #endregion
 
