@@ -587,39 +587,39 @@ namespace Curso
 
             #region Exercicio resolvido 2 (String Builder)
 
-            Comment comment1 = new Comment("Have a nice trip");
-            Comment comment2 = new Comment("Wow, awesome!!!");
+            //Comment comment1 = new Comment("Have a nice trip");
+            //Comment comment2 = new Comment("Wow, awesome!!!");
 
-            Post post1 = new Post
-                (
-                    moment: DateTime.Parse("20/05/2022 13:05:00"),
-                    title: "Traveling to USA",
-                    content: "Visitando esse país maravilhoso",
-                    likes: 12
-                );
+            //Post post1 = new Post
+            //    (
+            //        moment: DateTime.Parse("20/05/2022 13:05:00"),
+            //        title: "Traveling to USA",
+            //        content: "Visitando esse país maravilhoso",
+            //        likes: 12
+            //    );
 
-            post1.AddComent(comment1);
-            post1.AddComent(comment2);
-
-
-            Comment comment3 = new Comment("Have a good night");
-            Comment comment4 = new Comment("May the force be whit you");
-
-            Post post2 = new Post
-                (
-                    moment: DateTime.Parse("20/05/2022 23:05:00"),
-                    title: "Good night guys",
-                    content: "See you tomorrow",
-                    likes: 12
-                );
-
-            post2.AddComent(comment3);
-            post2.AddComent(comment4);
+            //post1.AddComent(comment1);
+            //post1.AddComent(comment2);
 
 
-            Console.WriteLine(post1);
-            Console.WriteLine("");
-            Console.WriteLine(post2);
+            //Comment comment3 = new Comment("Have a good night");
+            //Comment comment4 = new Comment("May the force be whit you");
+
+            //Post post2 = new Post
+            //    (
+            //        moment: DateTime.Parse("20/05/2022 23:05:00"),
+            //        title: "Good night guys",
+            //        content: "See you tomorrow",
+            //        likes: 12
+            //    );
+
+            //post2.AddComent(comment3);
+            //post2.AddComent(comment4);
+
+
+            //Console.WriteLine(post1);
+            //Console.WriteLine("");
+            //Console.WriteLine(post2);
 
             #endregion
 
