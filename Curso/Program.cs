@@ -1,5 +1,7 @@
 ﻿using System;
-using Curso.Entities.Post;
+using Accord.MachineLearning.VectorMachines;
+using Accord.MachineLearning.VectorMachines.Learning;
+using Accord.Statistics.Kernels;
 
 namespace Curso
 {
@@ -131,7 +133,7 @@ namespace Curso
             //Console.WriteLine();
             //Console.WriteLine($"{retangulo}");
 
-            #endregion 
+            #endregion
 
             #region Conta bancaria
 
@@ -620,6 +622,47 @@ namespace Curso
             //Console.WriteLine(post1);
             //Console.WriteLine("");
             //Console.WriteLine(post2);
+
+            #endregion
+
+            #region Exemplo de basico IA
+
+            //// Dados de treinamento (peso, textura) e suas respectivas classes (0 para maçã, 1 para laranja)
+            //double[][] inputs =
+            //{
+            //    new double[] {140, 1}, // maçã
+            //    new double[] {130, 1}, // maçã
+            //    new double[] {150, 0}, // laranja
+            //    new double[] {170, 0}  // laranja
+            //};
+
+            //int[] outputs = { 0, 0, 1, 1 }; // 0: maçã, 1: laranja
+
+            //// Criando o classificador SVM (Support Vector Machine)
+            //SupportVectorMachine<Gaussian> svm = new SupportVectorMachine<Gaussian>(inputs:1);
+
+            //// Treinando o classificador SVM com os dados de treinamento
+            //var teacher = new SequentialMinimalOptimization<Gaussian>()
+            //{
+            //    Complexity = 100 // Ajuste o parâmetro de complexidade conforme necessário
+            //};
+            //double error = teacher.Run(svm, inputs, outputs);
+
+            //// Dados de teste
+            //double[] testInput = { 160, 0 }; // Peso: 160g, Textura: irregular
+
+            //// Realizando a classificação
+            //bool predictedClass = svm.Decide(testInput);
+
+            //// Interpretando o resultado
+            //if (predictedClass == true)
+            //{
+            //    Console.WriteLine("A fruta é uma maçã.");
+            //}
+            //else
+            //{
+            //    Console.WriteLine("A fruta é uma laranja.");
+            //}
 
             #endregion
 
