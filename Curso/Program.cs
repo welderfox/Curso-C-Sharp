@@ -623,6 +623,11 @@ namespace Curso
 
             #endregion
 
+            Felino felino = new Felino("Onça","Parda", 5);
+
+            Console.WriteLine(felino);
+
+
         }
     }
 }
